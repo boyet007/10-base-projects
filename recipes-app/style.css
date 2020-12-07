@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Texturina", arial;
+    margin: 0;
+    background-color: #ba9833;
+    background-image: linear-gradient(315deg, #ba9833 0%, #993333 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.mobile-container {
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 10px 2px #3333331a;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+header input {
+    background-color: rgb(231, 231, 231);
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(236, 128, 128);
+    margin-left: 10px;
+}
+
+.fav-container {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(233, 190, 183);
+}
+
+.fav-meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.fav-meals li {
+    position: relative;
+    width: 75px;
+    margin: 5px;
+}
+
+.fav-meals li .clear {
+    background-color:transparent;
+    position: absolute;
+    top:-0.5rem;
+    right: -0.5rem;
+    cursor:pointer;
+    border:none;
+    font-size:1.2rem;
+    opacity: 0;
+}
+
+.fav-meals li:hover .clear {
+    opacity: 1;
+}
+
+.fav-meals li img {
+    border: 2px solid rgb(42, 42, 11);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px 2px #333333a1;
+    height: 70px;
+    width: 70px;
+}
+
+.fav-meals li span {
+    display:inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    width:75px;
+    position: relative;
+}
+
+.fav-meals li:hover span {
+    white-space: normal;
+    overflow: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.meals {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    margin: 1.5rem;
+    overflow: hidden;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random {
+    position: absolute;
+    top: 10px;
+    background-color: white;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4 {
+    margin: 0;
+}
+
+.meal-body .fav-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: rgb(168, 168, 168);
+}
+
+.meal-body .fav-btn .active {
+    color: rebeccapurple
+}
